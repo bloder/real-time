@@ -12,7 +12,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-        buildConfigField "String", "CHAT_SERVER_ADRESS", '"http://0.0.0.0:5001/"'
+        buildConfigField "String", "CHAT_SERVER_ADRESS", '"http:////////"'
     }
     buildTypes {
         release {

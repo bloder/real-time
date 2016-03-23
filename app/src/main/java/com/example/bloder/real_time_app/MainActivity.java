@@ -57,11 +57,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void configuringSocket() {
-        socket.on("rt-change", onUserData);
+        socket.on("user-created", onUserData);
         socket.connect();
     }
 
-    private void addUser(String name, int age) {
+    @UiThread
+    protected void addUser(String name, int age) {
         userList.add(new User(name, age));
         users.getAdapter().notifyItemInserted(userList.size() - 1);
     }
@@ -70,10 +71,8 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void call(Object... args) {
             JSONObject data = (JSONObject) args[0];
-
             String name;
             int age;
-
             try {
                 name = data.getString("name");
                 age = data.getInt("age");
