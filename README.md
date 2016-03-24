@@ -17,3 +17,4 @@
 
 - Android Annotations (http://androidannotations.org/)
 - Circle ImageView (https://github.com/hdodenhof/CircleImageView)
+- Socket.IO (http://socket.io/)
